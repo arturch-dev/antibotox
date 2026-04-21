@@ -6,7 +6,26 @@
     <title>Антиботокс — курс природного омолодження</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Підключення стилів для валідації телефону -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.19/build/css/intlTelInput.css">
+    
+    <!-- Facebook Pixel Code (Заглушка) -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID'); // ВСТАВ СВІЙ ID ПІКСЕЛЯ
+    fbq('track', 'PageView');
+    </script>
+
     <style>
+        /* Усі твої попередні стилі збережено */
         :root{
             --bg:#0d0a0e;--bg2:#151217;--card:#1c181f;--card2:#231f26;
             --border:rgba(180,140,120,.12);--border-h:rgba(180,140,120,.25);
@@ -136,6 +155,11 @@
         .f-note i{color:var(--brand);font-size:11px;}
         .footer{text-align:center;padding:24px;font-size:12px;color:var(--muted);}
 
+        /* Спеціальні стилі для інпута телефону */
+        .iti { width: 100%; }
+        .iti__country-list { background-color: var(--card2); border-color: var(--border); color: var(--white); }
+        .iti__country.iti__highlight { background-color: rgba(196,132,122,.15); }
+
         /* mobile */
         .m-s{display:none;position:fixed;bottom:0;left:0;right:0;z-index:100;padding:10px 16px 14px;background:rgba(13,10,14,.92);backdrop-filter:blur(16px);border-top:1px solid var(--border);}
         .m-s a{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:15px;background:linear-gradient(135deg,var(--brand),#a86b62);color:#fff;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:1px;border-radius:60px;text-decoration:none;}
@@ -150,7 +174,7 @@
 
 <div class="wrap">
 
-<!-- ══════ HERO ══════ -->
+<!-- Усі секції контенту до форми залишаються без змін -->
 <section class="hero">
     <div class="hero-tag"><div class="dot"></div>Набір відкрито</div>
     <h1><em>Антиботокс</em></h1>
@@ -161,10 +185,10 @@
         <div class="st"><div class="st-n">57</div><div class="st-l">Відеоуроків</div></div>
         <div class="st"><div class="st-n">11</div><div class="st-l">Модулів</div></div>
     </div>
-    <a href="#form" class="cta-main">Залишити заявку <i class="fa-solid fa-arrow-right" style="font-size:13px;"></i></a>
+    <!-- Додано onclick для фіксації пікселя -->
+    <a href="#form" class="cta-main" onclick="trackCheckout()">Залишити заявку <i class="fa-solid fa-arrow-right" style="font-size:13px;"></i></a>
 </section>
 
-<!-- ══════ WHAT YOU GET ══════ -->
 <div class="divider"></div>
 <section class="sec">
     <div class="ey">Що всередині</div>
@@ -178,7 +202,6 @@
     </div>
 </section>
 
-<!-- ══════ FOR WHO ══════ -->
 <div class="divider"></div>
 <section class="sec">
     <div class="ey">Для кого</div>
@@ -192,63 +215,32 @@
     <div class="wb">Якщо ти вже пробувала масажі, креми або процедури — але ефект короткий — цей курс створений саме для тебе.</div>
 </section>
 
-<!-- ══════ TARIFFS ══════ -->
 <div class="divider"></div>
 <section class="sec" id="tariffs">
     <div class="ey">Тарифи</div>
     <div class="st2">Обери свій <span>формат</span></div>
     <p class="sub">Ціни та деталі оплати розкаже моя помічниця — підберемо варіант саме для тебе.</p>
     <div class="tg">
-        <div class="t"><div class="t-name">Міні</div><div class="t-goal">Зняти набряки, підтягнути лоб, прибрати заломи та міжбрівку</div><ul class="tl"><li><i class="fa-solid fa-check ck"></i>8 модулів / 29 уроків</li><li><i class="fa-solid fa-check ck"></i>Масаж + тейпування для чола</li><li><i class="fa-solid fa-check ck"></i>Перевірка технік</li><li><i class="fa-solid fa-check ck"></i>Загальний чат</li><li><i class="fa-solid fa-check ck"></i>Тривалість: 2 міс</li><li><i class="fa-solid fa-check ck"></i>Доступ: 3 міс</li><li><i class="fa-solid fa-xmark no"></i><span style="color:#555">Групові зідзвони</span></li><li><i class="fa-solid fa-xmark no"></i><span style="color:#555">Бонусні модулі</span></li><li><i class="fa-solid fa-xmark no"></i><span style="color:#555">Запрошені спеціалісти</span></li></ul><a href="#form" class="t-cta sc">Дізнатися ціну</a></div>
-        <div class="t pop"><div class="pop-b">Найпопулярніший</div><div class="t-name">Pro</div><div class="t-goal">Комплексно омолодити все обличчя + нутриціологія та психосоматика</div><ul class="tl"><li><i class="fa-solid fa-check ck"></i>11 модулів / 57 уроків</li><li><i class="fa-solid fa-check ck"></i>Усі масажні та тейпувальні техніки</li><li><i class="fa-solid fa-check ck"></i>Перевірка технік особисто мною</li><li><i class="fa-solid fa-check ck"></i>2 групові зідзвони зі мною</li><li><i class="fa-solid fa-check ck"></i>Бонус: нутриціологія</li><li><i class="fa-solid fa-check ck"></i>Бонус: психосоматика</li><li><i class="fa-solid fa-check ck"></i>Бонус: спеціаліст з постави</li><li><i class="fa-solid fa-check ck"></i>Тривалість: 2 міс</li><li><i class="fa-solid fa-check ck"></i>Доступ: 6 міс</li></ul><a href="#form" class="t-cta pr">Дізнатися ціну</a></div>
-        <div class="t"><div class="t-name">VIP Супровід</div><div class="t-goal">Максимальний результат з моїм особистим супроводом</div><ul class="tl"><li><i class="fa-solid fa-check ck"></i>Усе з тарифу Pro</li><li><i class="fa-solid fa-check ck"></i>Персональна діагностика</li><li><i class="fa-solid fa-check ck"></i>Індивідуальний план 24/7</li><li><i class="fa-solid fa-check ck"></i>3 живі дзвінки зі мною</li><li><i class="fa-solid fa-check ck"></i>Тривалість: 2 міс</li><li><i class="fa-solid fa-check ck"></i>Доступ: 12 міс</li></ul><a href="#form" class="t-cta sc">Дізнатися ціну</a></div>
+        <div class="t"><div class="t-name">Міні</div><div class="t-goal">Зняти набряки, підтягнути лоб, прибрати заломи та міжбрівку</div><ul class="tl"><li><i class="fa-solid fa-check ck"></i>8 модулів / 29 уроків</li><li><i class="fa-solid fa-check ck"></i>Масаж + тейпування для чола</li><li><i class="fa-solid fa-check ck"></i>Перевірка технік</li><li><i class="fa-solid fa-check ck"></i>Загальний чат</li><li><i class="fa-solid fa-check ck"></i>Тривалість: 2 міс</li><li><i class="fa-solid fa-check ck"></i>Доступ: 3 міс</li><li><i class="fa-solid fa-xmark no"></i><span style="color:#555">Групові зідзвони</span></li><li><i class="fa-solid fa-xmark no"></i><span style="color:#555">Бонусні модулі</span></li><li><i class="fa-solid fa-xmark no"></i><span style="color:#555">Запрошені спеціалісти</span></li></ul><a href="#form" class="t-cta sc" onclick="trackCheckout()">Дізнатися ціну</a></div>
+        <div class="t pop"><div class="pop-b">Найпопулярніший</div><div class="t-name">Pro</div><div class="t-goal">Комплексно омолодити все обличчя + нутриціологія та психосоматика</div><ul class="tl"><li><i class="fa-solid fa-check ck"></i>11 модулів / 57 уроків</li><li><i class="fa-solid fa-check ck"></i>Усі масажні та тейпувальні техніки</li><li><i class="fa-solid fa-check ck"></i>Перевірка технік особисто мною</li><li><i class="fa-solid fa-check ck"></i>2 групові зідзвони зі мною</li><li><i class="fa-solid fa-check ck"></i>Бонус: нутриціологія</li><li><i class="fa-solid fa-check ck"></i>Бонус: психосоматика</li><li><i class="fa-solid fa-check ck"></i>Бонус: спеціаліст з постави</li><li><i class="fa-solid fa-check ck"></i>Тривалість: 2 міс</li><li><i class="fa-solid fa-check ck"></i>Доступ: 6 міс</li></ul><a href="#form" class="t-cta pr" onclick="trackCheckout()">Дізнатися ціну</a></div>
+        <div class="t"><div class="t-name">VIP Супровід</div><div class="t-goal">Максимальний результат з моїм особистим супроводом</div><ul class="tl"><li><i class="fa-solid fa-check ck"></i>Усе з тарифу Pro</li><li><i class="fa-solid fa-check ck"></i>Персональна діагностика</li><li><i class="fa-solid fa-check ck"></i>Індивідуальний план 24/7</li><li><i class="fa-solid fa-check ck"></i>3 живі дзвінки зі мною</li><li><i class="fa-solid fa-check ck"></i>Тривалість: 2 міс</li><li><i class="fa-solid fa-check ck"></i>Доступ: 12 міс</li></ul><a href="#form" class="t-cta sc" onclick="trackCheckout()">Дізнатися ціну</a></div>
     </div>
 </section>
 
-<!-- ══════ OBJECTIONS ══════ -->
 <div class="divider"></div>
 <section class="sec">
     <div class="ey">Чесно про сумніви</div>
     <div class="st2">Тобі це <span>знайоме</span>?</div>
     <p class="sub">Кожна з цих думок — нормальна. Ось що я хочу, щоб ти знала:</p>
-
-    <div class="obj">
-        <div class="obj-q"><i class="fa-solid fa-clock"></i> «У мене немає часу — діти, робота, побут…»</div>
-        <div class="obj-a">Курс займає <em>20 хвилин на день</em>. Це менше, ніж один епізод серіалу. Багато учасниць — мами з двома дітьми, які роблять техніки, <strong>поки малюк спить або дивиться мультик</strong>. Відеоуроки в записі — дивишся коли зручно. Немає розкладу, немає тиску. Навіть якщо пропустила день — нічого страшного, доступ залишається.</div>
-    </div>
-
-    <div class="obj">
-        <div class="obj-q"><i class="fa-solid fa-wallet"></i> «Зараз не найкращий час витрачати гроші…»</div>
-        <div class="obj-a">Один сеанс ботоксу коштує <em>$150-300</em> — і через 4-6 місяців треба повторювати. Крем за 3000 грн мажеш місяць і не бачиш різниці. Косметолог раз на місяць — це 1500-3000 грн щоразу. Курс ти проходиш <strong>один раз — і вмієш назавжди</strong>. Це інвестиція в навичку, яка залишається з тобою. Плюс — є оплата частинами.</div>
-    </div>
-
-    <div class="obj">
-        <div class="obj-q"><i class="fa-solid fa-circle-question"></i> «Не впевнена, що це спрацює саме для мене»</div>
-        <div class="obj-a">Саме тому у курсі є <em>перевірка технік від Світлани</em> — ти не просто дивишся відео, а отримуєш зворотний зв'язок, чи правильно робиш. А у VIP — персональна Zoom-діагностика, де я дивлюся на <strong>ТВОЄ обличчя</strong> і складаю план саме для тебе. Це не масовий продукт — це система з підтримкою.</div>
-    </div>
-
-    <div class="obj">
-        <div class="obj-q"><i class="fa-solid fa-face-meh"></i> «Я вже пробувала масаж/тейпи — не допомогло»</div>
-        <div class="obj-a">У 80% випадків проблема не в техніках, а в тому, що <strong>немає системи</strong>. Ти робиш одну вправу з Instagram, бачиш ефект — і кидаєш через 3 дні, бо він не тримається. Або робиш неправильно і не знаєш про це. Курс дає <em>повну систему по кожній зоні</em> + перевірку, що ти робиш правильно. Це зовсім інший рівень.</div>
-    </div>
-
-    <div class="obj">
-        <div class="obj-q"><i class="fa-solid fa-triangle-exclamation"></i> «Боюся нашкодити — зробити щось не так»</div>
-        <div class="obj-a">Це найчастіший страх — і він зрозумілий. Саме тому <strong>кожен рух у курсі пояснений</strong>: куди натискати, як сильно, подушечками чи кісточками, і чому саме так. Плюс — загальний чат, де можна запитати будь-що. Ти <em>не залишишся сама</em> з невпевненістю. А в VIP — я особисто перевіряю твою техніку по відео.</div>
-    </div>
-
-    <div class="obj">
-        <div class="obj-q"><i class="fa-solid fa-hourglass-half"></i> «А раптом куплю і не пройду до кінця?»</div>
-        <div class="obj-a">Доступ до матеріалів — <em>від 3 до 12 місяців</em> залежно від тарифу. Ніхто не тисне. Формат курсу — <strong>короткі відеоуроки</strong> (не лекції по 2 години). Подивилась — зробила — пішла жити. Багато учасниць кажуть, що саме цей формат допоміг нарешті дійти до кінця, бо <em>немає відчуття перевантаження</em>.</div>
-    </div>
-
-    <div class="obj">
-        <div class="obj-q"><i class="fa-solid fa-syringe"></i> «Може, простіше просто вколоти ботокс?»</div>
-        <div class="obj-a">Ботокс <strong>паралізує м'яз — не розслабляє</strong>. Через 4-6 місяців ефект зникає, і ти йдеш знову. Одна учасниця написала: <em>«Через пів року знов як стара бабка»</em>. А ще — сусідні м'язи починають компенсувати, і обличчя змінюється не на краще. Курс дає тобі <strong>навичку на все життя</strong>: розумієш своє обличчя і підтримуєш його сама.</div>
-    </div>
+    <div class="obj"><div class="obj-q"><i class="fa-solid fa-clock"></i> «У мене немає часу — діти, робота, побут…»</div><div class="obj-a">Курс займає <em>20 хвилин на день</em>. Це менше, ніж один епізод серіалу. Багато учасниць — мами з двома дітьми, які роблять техніки, <strong>поки малюк спить або дивиться мультик</strong>. Відеоуроки в записі — дивишся коли зручно. Немає розкладу, немає тиску. Навіть якщо пропустила день — нічого страшного, доступ залишається.</div></div>
+    <div class="obj"><div class="obj-q"><i class="fa-solid fa-wallet"></i> «Зараз не найкращий час витрачати гроші…»</div><div class="obj-a">Один сеанс ботоксу коштує <em>$150-300</em> — і через 4-6 місяців треба повторювати. Крем за 3000 грн мажеш місяць і не бачиш різниці. Косметолог раз на місяць — це 1500-3000 грн щоразу. Курс ти проходиш <strong>один раз — і вмієш назавжди</strong>. Це інвестиція в навичку, яка залишається з тобою. Плюс — є оплата частинами.</div></div>
+    <div class="obj"><div class="obj-q"><i class="fa-solid fa-circle-question"></i> «Не впевнена, що це спрацює саме для мене»</div><div class="obj-a">Саме тому у курсі є <em>перевірка технік від Світлани</em> — ти не просто дивишся відео, а отримуєш зворотний зв'язок, чи правильно робиш. А у VIP — персональна Zoom-діагностика, де я дивлюся на <strong>ТВОЄ обличчя</strong> і складаю план саме для тебе. Це не масовий продукт — це система з підтримкою.</div></div>
+    <div class="obj"><div class="obj-q"><i class="fa-solid fa-face-meh"></i> «Я вже пробувала масаж/тейпи — не допомогло»</div><div class="obj-a">У 80% випадків проблема не в техніках, а в тому, що <strong>немає системи</strong>. Ти робиш одну вправу з Instagram, бачиш ефект — і кидаєш через 3 дні, бо він не тримається. Або робиш неправильно і не знаєш про це. Курс дає <em>повну систему по кожній зоні</em> + перевірку, що ти робиш правильно. Це зовсім інший рівень.</div></div>
+    <div class="obj"><div class="obj-q"><i class="fa-solid fa-triangle-exclamation"></i> «Боюся нашкодити — зробити щось не так»</div><div class="obj-a">Це найчастіший страх — і він зрозумілий. Саме тому <strong>кожен рух у курсі пояснений</strong>: куди натискати, як сильно, подушечками чи кісточками, і чому саме так. Плюс — загальний чат, де можна запитати будь-що. Ти <em>не залишишся сама</em> з невпевненістю. А в VIP — я особисто перевіряю твою техніку по відео.</div></div>
+    <div class="obj"><div class="obj-q"><i class="fa-solid fa-hourglass-half"></i> «А раптом куплю і не пройду до кінця?»</div><div class="obj-a">Доступ до матеріалів — <em>від 3 до 12 місяців</em> залежно від тарифу. Ніхто не тисне. Формат курсу — <strong>короткі відеоуроки</strong> (не лекції по 2 години). Подивилась — зробила — пішла жити. Багато учасниць кажуть, що саме цей формат допоміг нарешті дійти до кінця, бо <em>немає відчуття перевантаження</em>.</div></div>
+    <div class="obj"><div class="obj-q"><i class="fa-solid fa-syringe"></i> «Може, простіше просто вколоти ботокс?»</div><div class="obj-a">Ботокс <strong>паралізує м'яз — не розслабляє</strong>. Через 4-6 місяців ефект зникає, і ти йдеш знову. Одна учасниця написала: <em>«Через пів року знов як стара бабка»</em>. А ще — сусідні м'язи починають компенсувати, і обличчя змінюється не на краще. Курс дає тобі <strong>навичку на все життя</strong>: розумієш своє обличчя і підтримуєш його сама.</div></div>
 </section>
 
-<!-- ══════ BONUSES ══════ -->
 <div class="divider"></div>
 <section class="sec">
     <div class="ey">Запрошені спеціалісти</div>
@@ -260,7 +252,6 @@
     </div>
 </section>
 
-<!-- ══════ EXPERT ══════ -->
 <div class="divider"></div>
 <section class="sec">
     <div class="ey">Експерт</div>
@@ -275,7 +266,6 @@
     </div>
 </section>
 
-<!-- ══════ REVIEWS ══════ -->
 <div class="divider"></div>
 <section class="sec">
     <div class="ey">Відгуки</div>
@@ -286,25 +276,44 @@
     <div class="rv"><div class="rv-t">«Я дуже хочу ваш курс, але все відкладаю — то те треба купити, то те. А потім зрозуміла: я відкладаю саму себе. І пішла.»</div><div class="rv-a">Марина, 36 років · VIP · 1 місяць</div></div>
 </section>
 
-<!-- ══════ CTA ══════ -->
 <div class="cta-b">
     <h3>Готова побачити <span>своє нове обличчя</span>?</h3>
     <p>Залиш заявку — моя помічниця зв'яжеться, відповість на питання і допоможе обрати тариф</p>
-    <a href="#form" class="cta-main">Залишити заявку <i class="fa-solid fa-arrow-right" style="font-size:12px;"></i></a>
+    <a href="#form" class="cta-main" onclick="trackCheckout()">Залишити заявку <i class="fa-solid fa-arrow-right" style="font-size:12px;"></i></a>
 </div>
 
-<!-- ══════ FORM ══════ -->
+<!-- ══════ ФОРМА (ОНОВЛЕНО) ══════ -->
 <section class="f-sec" id="form">
     <div class="f-card">
         <h2>Залишити заявку</h2>
         <p class="fs">Заповни форму — моя помічниця зв'яжеться, відповість на питання і підбере тариф</p>
-        <form id="anketa" onsubmit="handleSubmit(event)">
-            <div class="fd"><label>Твоє ім'я</label><input type="text" name="name" placeholder="Як тебе звати?" required></div>
-            <div class="fd"><label>Номер телефону</label><input type="tel" name="phone" placeholder="+380 ..." required></div>
-            <div class="fd"><label>Телеграм (@нік або номер)</label><input type="text" name="telegram" placeholder="@username або номер"></div>
-            <div class="fd"><label>Що тебе найбільше турбує в обличчі?</label><textarea name="request" placeholder="Набряки, зморшки, овал, втомлений вигляд..."></textarea></div>
-            <button type="submit" class="cta-main" style="width:100%;justify-content:center;margin-top:8px;">Надіслати заявку <i class="fa-solid fa-paper-plane"></i></button>
+        
+        <form id="anketa">
+            <div class="fd">
+                <label>Твоє ім'я</label>
+                <input type="text" id="u_name" placeholder="Як тебе звати?" required>
+            </div>
+            
+            <div class="fd">
+                <label>Номер телефону</label>
+                <input type="tel" id="u_phone" required>
+                <!-- Блок для помилки вводу номера -->
+                <span id="phone-error" style="color:#e74c3c; font-size:12px; display:none; margin-top:6px; font-weight:600;"><i class="fa-solid fa-circle-exclamation"></i> Будь ласка, введіть коректний номер телефону</span>
+            </div>
+            
+            <div class="fd">
+                <label>Телеграм (@нік або номер)</label>
+                <input type="text" id="u_tg" placeholder="@username або номер">
+            </div>
+            
+            <div class="fd">
+                <label>Що тебе найбільше турбує в обличчі?</label>
+                <textarea id="u_req" placeholder="Набряки, зморшки, овал, втомлений вигляд..."></textarea>
+            </div>
+            
+            <button type="submit" id="submit-btn" class="cta-main" style="width:100%;justify-content:center;margin-top:8px;">Надіслати заявку <i class="fa-solid fa-paper-plane"></i></button>
         </form>
+        
         <div class="f-note"><i class="fa-solid fa-shield-halved"></i>Ні до чого не зобов'язує. Просто дізнаєшся деталі.</div>
     </div>
 </section>
@@ -312,20 +321,103 @@
 </div>
 
 <div class="footer">© 2026 Svitlana Gavryliuk · @svitlana_tape</div>
-<div class="m-s"><a href="#form">Залишити заявку <i class="fa-solid fa-arrow-right" style="font-size:12px;"></i></a></div>
+<div class="m-s"><a href="#form" onclick="trackCheckout()">Залишити заявку <i class="fa-solid fa-arrow-right" style="font-size:12px;"></i></a></div>
+
+<!-- JS БІБЛІОТЕКИ -->
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.19/build/js/intlTelInput.min.js"></script>
 
 <script>
-function handleSubmit(e){
-    e.preventDefault();
-    const c=e.target.closest('.f-card');
-    c.innerHTML=`<div style="text-align:center;padding:24px 0;">
-        <div style="width:64px;height:64px;border-radius:50%;background:var(--card2);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:28px;color:var(--brand);border:2px solid rgba(196,132,122,.2);"><i class="fa-solid fa-check"></i></div>
-        <h2 style="font-family:var(--serif);font-size:26px;color:var(--white);margin-bottom:8px;">Дякую!</h2>
-        <p style="font-size:15px;color:var(--text);margin-bottom:16px;">Твоя заявка отримана. Моя помічниця зв'яжеться найближчим часом.</p>
-        <p style="font-size:13px;color:var(--muted);">А поки — підпишися на мій Telegram-канал:</p>
-        <a href="https://t.me/+DtserNmsSdcyZWM6" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:12px 28px;background:#229ED9;color:#fff;border-radius:14px;text-decoration:none;font-weight:700;font-size:14px;"><i class="fa-brands fa-telegram"></i> Перейти в канал</a>
-    </div>`;
-}
+    // 1. ПАРСИНГ UTM-МІТОК З URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const utms = {
+        utm_source: urlParams.get('utm_source') || '',
+        utm_medium: urlParams.get('utm_medium') || '',
+        utm_campaign: urlParams.get('utm_campaign') || ''
+    };
+
+    // 2. ІНІЦІАЛІЗАЦІЯ І ВАЛІДАЦІЯ ТЕЛЕФОНУ
+    const phoneInput = document.querySelector("#u_phone");
+    const errorMsg = document.querySelector("#phone-error");
+    
+    const iti = window.intlTelInput(phoneInput, {
+        initialCountry: "auto",
+        geoIpLookup: function(success, failure) {
+            fetch("https://get.geojs.io/v1/ip/country.json")
+                .then(res => res.json())
+                .then(data => success(data.country))
+                .catch(() => success("ua"));
+        },
+        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.19/build/js/utils.js",
+        strictMode: true,
+        separateDialCode: true
+    });
+
+    // 3. ФУНКЦІЯ ДЛЯ ПІКСЕЛЯ
+    function trackCheckout() {
+        if(typeof fbq !== 'undefined') {
+            fbq('track', 'InitiateCheckout');
+        }
+    }
+
+    // 4. ВІДПРАВКА ФОРМИ В GOOGLE SHEETS
+    document.getElementById('anketa').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Ховаємо помилку
+        errorMsg.style.display = "none";
+        
+        // Перевірка правильності номера
+        if (!iti.isValidNumber()) {
+            errorMsg.style.display = "block";
+            return;
+        }
+
+        // Візуальна зміна кнопки (завантаження)
+        const btn = document.getElementById('submit-btn');
+        const originalBtnText = btn.innerHTML;
+        btn.innerHTML = 'Відправка... <i class="fa-solid fa-spinner fa-spin"></i>';
+        btn.disabled = true;
+
+        // Формуємо дані для відправки
+        const payload = {
+            source_flag: "landing_web", // Спеціальний прапорець для бекенду
+            name: document.getElementById('u_name').value,
+            phone: iti.getNumber(), // беремо номер у міжнародному форматі (з плюсом)
+            telegram: document.getElementById('u_tg').value,
+            request: document.getElementById('u_req').value,
+            ...utms
+        };
+
+        // ВСТАВ СВІЙ URL ВІД GOOGLE APPS SCRIPT СЮДИ 👇
+        const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_SCRIPT_URL";
+
+        fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            body: JSON.stringify(payload) // Відправляємо як JSON
+        })
+        .then(res => res.json())
+        .then(data => {
+            // Піксель: успішний лід
+            if(typeof fbq !== 'undefined') fbq('track', 'Lead');
+            
+            // Показуємо екран успіху замість форми
+            const card = document.querySelector('.f-card');
+            card.innerHTML = `
+                <div style="text-align:center;padding:24px 0;">
+                    <div style="width:64px;height:64px;border-radius:50%;background:var(--card2);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:28px;color:var(--brand);border:2px solid rgba(196,132,122,.2);"><i class="fa-solid fa-check"></i></div>
+                    <h2 style="font-family:var(--serif);font-size:26px;color:var(--white);margin-bottom:8px;">Дякую!</h2>
+                    <p style="font-size:15px;color:var(--text);margin-bottom:16px;">Твоя заявка успішно отримана. Моя помічниця зв'яжеться найближчим часом.</p>
+                    <p style="font-size:13px;color:var(--muted);">А поки — підпишися на мій Telegram-канал:</p>
+                    <a href="YOUR_BOT_LINK" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:12px 28px;background:#229ED9;color:#fff;border-radius:14px;text-decoration:none;font-weight:700;font-size:14px;"><i class="fa-brands fa-telegram"></i> Перейти в канал</a>
+                </div>
+            `;
+        })
+        .catch(err => {
+            alert('Сталася помилка при відправці. Спробуйте ще раз або перевірте інтернет.');
+            btn.innerHTML = originalBtnText;
+            btn.disabled = false;
+        });
+    });
 </script>
 </body>
 </html>
