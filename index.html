@@ -7,10 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Підключення стилів для валідації телефону -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.19/build/css/intlTelInput.css">
     
-    <!-- Facebook Pixel Code (Заглушка) -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -20,12 +18,11 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'YOUR_PIXEL_ID'); // ВСТАВ СВІЙ ID ПІКСЕЛЯ
+    fbq('init', 'YOUR_PIXEL_ID'); 
     fbq('track', 'PageView');
     </script>
 
     <style>
-        /* Усі твої попередні стилі збережено */
         :root{
             --bg:#0d0a0e;--bg2:#151217;--card:#1c181f;--card2:#231f26;
             --border:rgba(180,140,120,.12);--border-h:rgba(180,140,120,.25);
@@ -41,10 +38,8 @@
         body{font-family:var(--sans);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;}
         .wrap{max-width:940px;margin:0 auto;padding:0 20px;position:relative;z-index:1;}
 
-        /* bg */
         body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 70% 50% at 60% 20%,rgba(196,132,122,.04),transparent 60%),radial-gradient(ellipse 50% 40% at 20% 80%,rgba(201,168,124,.03),transparent 60%);pointer-events:none;z-index:0;}
 
-        /* hero */
         .hero{padding:72px 0 56px;text-align:center;}
         .hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--brand-bg);border:1px solid rgba(196,132,122,.2);border-radius:100px;padding:7px 20px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--brand);margin-bottom:24px;}
         .hero-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--brand);animation:p 2s infinite;}
@@ -58,7 +53,6 @@
         .cta-main{display:inline-flex;align-items:center;gap:10px;padding:18px 42px;background:linear-gradient(135deg,var(--brand),#a86b62);color:#fff;font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;border-radius:60px;text-decoration:none;box-shadow:0 6px 28px rgba(196,132,122,.25),var(--glow);transition:all .3s;border:none;cursor:pointer;}
         .cta-main:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(196,132,122,.35);}
 
-        /* sections */
         .sec{padding:60px 0;}
         .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(196,132,122,.15),transparent);max-width:500px;margin:0 auto;}
         .ey{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:8px;}
@@ -66,18 +60,15 @@
         .st2 span{color:var(--brand2);}
         .sub{font-size:15px;color:var(--muted);max-width:560px;line-height:1.65;margin-bottom:32px;}
 
-        /* cards */
         .c{background:var(--card);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow);transition:all .3s;}
         .c:hover{border-color:var(--border-h);box-shadow:var(--shadow-lg);}
 
-        /* get items */
         .gi{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--border);}
         .gi:last-child{border-bottom:none;}
         .gi-i{width:42px;height:42px;border-radius:12px;background:var(--brand-bg);display:flex;align-items:center;justify-content:center;color:var(--brand);font-size:16px;flex-shrink:0;}
         .gi h4{font-size:15px;font-weight:700;color:var(--white);margin-bottom:2px;}
         .gi p{font-size:13.5px;color:var(--muted);line-height:1.5;}
 
-        /* for who */
         .wg{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
         .wc{padding:22px;background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);}
         .wc .ic{font-size:20px;color:var(--brand);margin-bottom:8px;}
@@ -85,7 +76,6 @@
         .wc strong{color:var(--white);}
         .wb{margin-top:16px;padding:16px 20px;background:var(--card2);border:1px solid var(--border);border-radius:14px;font-size:14px;color:var(--text);line-height:1.6;text-align:center;}
 
-        /* tariffs */
         .tg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
         .t{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:28px 22px;box-shadow:var(--shadow);position:relative;transition:all .3s;}
         .t:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);}
@@ -104,7 +94,6 @@
         .t-cta.sc{background:var(--card2);color:var(--brand);border:1px solid rgba(196,132,122,.2);}
         .t-cta.sc:hover{background:rgba(196,132,122,.08);}
 
-        /* objections */
         .obj{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px;margin-bottom:14px;box-shadow:var(--shadow);}
         .obj-q{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--white);margin-bottom:10px;display:flex;align-items:flex-start;gap:12px;}
         .obj-q i{color:var(--brand);font-size:16px;margin-top:5px;flex-shrink:0;}
@@ -112,7 +101,6 @@
         .obj-a strong{color:var(--white);}
         .obj-a em{color:var(--brand2);font-style:normal;font-weight:700;}
 
-        /* expert */
         .ex{display:flex;gap:28px;align-items:center;padding:32px;background:var(--card);border:1px solid var(--border);border-radius:22px;box-shadow:var(--shadow);}
         .ex-ph{width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,var(--card2),var(--bg2));display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:38px;font-weight:700;color:var(--brand);flex-shrink:0;border:2px solid rgba(196,132,122,.15);}
         .ex .en{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--white);margin-bottom:4px;}
@@ -121,12 +109,10 @@
         .cr{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;background:var(--card2);border:1px solid var(--border);border-radius:8px;font-size:12px;color:var(--text);font-weight:600;}
         .cr i{color:var(--brand);font-size:10px;}
 
-        /* reviews */
         .rv{padding:24px;background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);margin-bottom:12px;}
         .rv-t{font-family:var(--serif);font-size:18px;font-style:italic;color:var(--white);line-height:1.5;margin-bottom:10px;}
         .rv-a{font-size:13px;color:var(--muted);font-weight:600;}
 
-        /* bonus */
         .bg2{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
         .bn{padding:22px;background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);}
         .bn-i{width:44px;height:44px;border-radius:12px;background:var(--brand-bg);display:flex;align-items:center;justify-content:center;color:var(--brand);font-size:18px;margin-bottom:10px;}
@@ -134,13 +120,11 @@
         .bn p{font-size:13px;color:var(--muted);line-height:1.5;}
         .bn-tag{display:inline-block;margin-top:8px;padding:3px 10px;background:var(--brand-bg);border-radius:6px;font-size:11px;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.5px;}
 
-        /* CTA banner */
         .cta-b{text-align:center;padding:48px 24px;background:linear-gradient(135deg,rgba(196,132,122,.06),rgba(201,168,124,.04));border:1px solid rgba(196,132,122,.12);border-radius:24px;margin:40px 0;}
         .cta-b h3{font-family:var(--serif);font-size:clamp(22px,3.5vw,34px);font-weight:700;color:var(--white);margin-bottom:6px;}
         .cta-b h3 span{color:var(--brand2);}
         .cta-b p{font-size:14px;color:var(--muted);margin-bottom:20px;}
 
-        /* form */
         .f-sec{padding:64px 0 80px;}
         .f-card{background:var(--card);border:1px solid var(--border);border-radius:24px;box-shadow:var(--shadow-lg);padding:36px;max-width:560px;margin:0 auto;}
         .f-card h2{font-family:var(--serif);font-size:28px;font-weight:700;color:var(--white);margin-bottom:6px;text-align:center;}
@@ -155,12 +139,10 @@
         .f-note i{color:var(--brand);font-size:11px;}
         .footer{text-align:center;padding:24px;font-size:12px;color:var(--muted);}
 
-        /* Спеціальні стилі для інпута телефону */
         .iti { width: 100%; }
         .iti__country-list { background-color: var(--card2); border-color: var(--border); color: var(--white); }
         .iti__country.iti__highlight { background-color: rgba(196,132,122,.15); }
 
-        /* mobile */
         .m-s{display:none;position:fixed;bottom:0;left:0;right:0;z-index:100;padding:10px 16px 14px;background:rgba(13,10,14,.92);backdrop-filter:blur(16px);border-top:1px solid var(--border);}
         .m-s a{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:15px;background:linear-gradient(135deg,var(--brand),#a86b62);color:#fff;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:1px;border-radius:60px;text-decoration:none;}
         @media(max-width:768px){
@@ -174,7 +156,6 @@
 
 <div class="wrap">
 
-<!-- Усі секції контенту до форми залишаються без змін -->
 <section class="hero">
     <div class="hero-tag"><div class="dot"></div>Набір відкрито</div>
     <h1><em>Антиботокс</em></h1>
@@ -185,8 +166,8 @@
         <div class="st"><div class="st-n">57</div><div class="st-l">Відеоуроків</div></div>
         <div class="st"><div class="st-n">11</div><div class="st-l">Модулів</div></div>
     </div>
-    <!-- Додано onclick для фіксації пікселя -->
-    <a href="#form" class="cta-main" onclick="trackCheckout()">Залишити заявку <i class="fa-solid fa-arrow-right" style="font-size:13px;"></i></a>
+    <!-- СКИДАЄМО ТАРИФ -->
+    <a href="#form" class="cta-main" onclick="setTariff(''); trackCheckout()">Залишити заявку <i class="fa-solid fa-arrow-right" style="font-size:13px;"></i></a>
 </section>
 
 <div class="divider"></div>
@@ -221,9 +202,17 @@
     <div class="st2">Обери свій <span>формат</span></div>
     <p class="sub">Ціни та деталі оплати розкаже моя помічниця — підберемо варіант саме для тебе.</p>
     <div class="tg">
-        <div class="t"><div class="t-name">Міні</div><div class="t-goal">Зняти набряки, підтягнути лоб, прибрати заломи та міжбрівку</div><ul class="tl"><li><i class="fa-solid fa-check ck"></i>8 модулів / 29 уроків</li><li><i class="fa-solid fa-check ck"></i>Масаж + тейпування для чола</li><li><i class="fa-solid fa-check ck"></i>Перевірка технік</li><li><i class="fa-solid fa-check ck"></i>Загальний чат</li><li><i class="fa-solid fa-check ck"></i>Тривалість: 2 міс</li><li><i class="fa-solid fa-check ck"></i>Доступ: 3 міс</li><li><i class="fa-solid fa-xmark no"></i><span style="color:#555">Групові зідзвони</span></li><li><i class="fa-solid fa-xmark no"></i><span style="color:#555">Бонусні модулі</span></li><li><i class="fa-solid fa-xmark no"></i><span style="color:#555">Запрошені спеціалісти</span></li></ul><a href="#form" class="t-cta sc" onclick="trackCheckout()">Дізнатися ціну</a></div>
-        <div class="t pop"><div class="pop-b">Найпопулярніший</div><div class="t-name">Pro</div><div class="t-goal">Комплексно омолодити все обличчя + нутриціологія та психосоматика</div><ul class="tl"><li><i class="fa-solid fa-check ck"></i>11 модулів / 57 уроків</li><li><i class="fa-solid fa-check ck"></i>Усі масажні та тейпувальні техніки</li><li><i class="fa-solid fa-check ck"></i>Перевірка технік особисто мною</li><li><i class="fa-solid fa-check ck"></i>2 групові зідзвони зі мною</li><li><i class="fa-solid fa-check ck"></i>Бонус: нутриціологія</li><li><i class="fa-solid fa-check ck"></i>Бонус: психосоматика</li><li><i class="fa-solid fa-check ck"></i>Бонус: спеціаліст з постави</li><li><i class="fa-solid fa-check ck"></i>Тривалість: 2 міс</li><li><i class="fa-solid fa-check ck"></i>Доступ: 6 міс</li></ul><a href="#form" class="t-cta pr" onclick="trackCheckout()">Дізнатися ціну</a></div>
-        <div class="t"><div class="t-name">VIP Супровід</div><div class="t-goal">Максимальний результат з моїм особистим супроводом</div><ul class="tl"><li><i class="fa-solid fa-check ck"></i>Усе з тарифу Pro</li><li><i class="fa-solid fa-check ck"></i>Персональна діагностика</li><li><i class="fa-solid fa-check ck"></i>Індивідуальний план 24/7</li><li><i class="fa-solid fa-check ck"></i>3 живі дзвінки зі мною</li><li><i class="fa-solid fa-check ck"></i>Тривалість: 2 міс</li><li><i class="fa-solid fa-check ck"></i>Доступ: 12 міс</li></ul><a href="#form" class="t-cta sc" onclick="trackCheckout()">Дізнатися ціну</a></div>
+        <div class="t"><div class="t-name">Міні</div><div class="t-goal">Зняти набряки, підтягнути лоб, прибрати заломи та міжбрівку</div><ul class="tl"><li><i class="fa-solid fa-check ck"></i>8 модулів / 29 уроків</li><li><i class="fa-solid fa-check ck"></i>Масаж + тейпування для чола</li><li><i class="fa-solid fa-check ck"></i>Перевірка технік</li><li><i class="fa-solid fa-check ck"></i>Загальний чат</li><li><i class="fa-solid fa-check ck"></i>Тривалість: 2 міс</li><li><i class="fa-solid fa-check ck"></i>Доступ: 3 міс</li><li><i class="fa-solid fa-xmark no"></i><span style="color:#555">Групові зідзвони</span></li><li><i class="fa-solid fa-xmark no"></i><span style="color:#555">Бонусні модулі</span></li><li><i class="fa-solid fa-xmark no"></i><span style="color:#555">Запрошені спеціалісти</span></li></ul>
+        <!-- ЗАПАМ'ЯТОВУЄМО ТАРИФ МІНІ -->
+        <a href="#form" class="t-cta sc" onclick="setTariff('Міні'); trackCheckout()">Дізнатися ціну</a></div>
+        
+        <div class="t pop"><div class="pop-b">Найпопулярніший</div><div class="t-name">Pro</div><div class="t-goal">Комплексно омолодити все обличчя + нутриціологія та психосоматика</div><ul class="tl"><li><i class="fa-solid fa-check ck"></i>11 модулів / 57 уроків</li><li><i class="fa-solid fa-check ck"></i>Усі масажні та тейпувальні техніки</li><li><i class="fa-solid fa-check ck"></i>Перевірка технік особисто мною</li><li><i class="fa-solid fa-check ck"></i>2 групові зідзвони зі мною</li><li><i class="fa-solid fa-check ck"></i>Бонус: нутриціологія</li><li><i class="fa-solid fa-check ck"></i>Бонус: психосоматика</li><li><i class="fa-solid fa-check ck"></i>Бонус: спеціаліст з постави</li><li><i class="fa-solid fa-check ck"></i>Тривалість: 2 міс</li><li><i class="fa-solid fa-check ck"></i>Доступ: 6 міс</li></ul>
+        <!-- ЗАПАМ'ЯТОВУЄМО ТАРИФ PRO -->
+        <a href="#form" class="t-cta pr" onclick="setTariff('Pro'); trackCheckout()">Дізнатися ціну</a></div>
+        
+        <div class="t"><div class="t-name">VIP Супровід</div><div class="t-goal">Максимальний результат з моїм особистим супроводом</div><ul class="tl"><li><i class="fa-solid fa-check ck"></i>Усе з тарифу Pro</li><li><i class="fa-solid fa-check ck"></i>Персональна діагностика</li><li><i class="fa-solid fa-check ck"></i>Індивідуальний план 24/7</li><li><i class="fa-solid fa-check ck"></i>3 живі дзвінки зі мною</li><li><i class="fa-solid fa-check ck"></i>Тривалість: 2 міс</li><li><i class="fa-solid fa-check ck"></i>Доступ: 12 міс</li></ul>
+        <!-- ЗАПАМ'ЯТОВУЄМО ТАРИФ VIP -->
+        <a href="#form" class="t-cta sc" onclick="setTariff('VIP Супровід'); trackCheckout()">Дізнатися ціну</a></div>
     </div>
 </section>
 
@@ -279,10 +268,10 @@
 <div class="cta-b">
     <h3>Готова побачити <span>своє нове обличчя</span>?</h3>
     <p>Залиш заявку — моя помічниця зв'яжеться, відповість на питання і допоможе обрати тариф</p>
-    <a href="#form" class="cta-main" onclick="trackCheckout()">Залишити заявку <i class="fa-solid fa-arrow-right" style="font-size:12px;"></i></a>
+    <!-- СКИДАЄМО ТАРИФ -->
+    <a href="#form" class="cta-main" onclick="setTariff(''); trackCheckout()">Залишити заявку <i class="fa-solid fa-arrow-right" style="font-size:12px;"></i></a>
 </div>
 
-<!-- ══════ ФОРМА (ОНОВЛЕНО) ══════ -->
 <section class="f-sec" id="form">
     <div class="f-card">
         <h2>Залишити заявку</h2>
@@ -297,7 +286,6 @@
             <div class="fd">
                 <label>Номер телефону</label>
                 <input type="tel" id="u_phone" required>
-                <!-- Блок для помилки вводу номера -->
                 <span id="phone-error" style="color:#e74c3c; font-size:12px; display:none; margin-top:6px; font-weight:600;"><i class="fa-solid fa-circle-exclamation"></i> Будь ласка, введіть коректний номер телефону</span>
             </div>
             
@@ -321,13 +309,20 @@
 </div>
 
 <div class="footer">© 2026 Svitlana Gavryliuk · @svitlana_tape</div>
-<div class="m-s"><a href="#form" onclick="trackCheckout()">Залишити заявку <i class="fa-solid fa-arrow-right" style="font-size:12px;"></i></a></div>
+<!-- СКИДАЄМО ТАРИФ (для мобільної кнопки) -->
+<div class="m-s"><a href="#form" onclick="setTariff(''); trackCheckout()">Залишити заявку <i class="fa-solid fa-arrow-right" style="font-size:12px;"></i></a></div>
 
-<!-- JS БІБЛІОТЕКИ -->
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.19/build/js/intlTelInput.min.js"></script>
 
 <script>
-    // 1. ПАРСИНГ UTM-МІТОК З URL
+    // 1. ГЛОБАЛЬНА ЗМІННА ДЛЯ ТАРИФУ
+    let selectedTariff = "";
+    
+    // Функція, яка запам'ятовує тариф при кліку на кнопку
+    function setTariff(tariffName) {
+        selectedTariff = tariffName;
+    }
+
     const urlParams = new URLSearchParams(window.location.search);
     const utms = {
         utm_source: urlParams.get('utm_source') || '',
@@ -335,7 +330,6 @@
         utm_campaign: urlParams.get('utm_campaign') || ''
     };
 
-    // 2. ІНІЦІАЛІЗАЦІЯ І ВАЛІДАЦІЯ ТЕЛЕФОНУ
     const phoneInput = document.querySelector("#u_phone");
     const errorMsg = document.querySelector("#phone-error");
     
@@ -352,55 +346,48 @@
         separateDialCode: true
     });
 
-    // 3. ФУНКЦІЯ ДЛЯ ПІКСЕЛЯ
     function trackCheckout() {
         if(typeof fbq !== 'undefined') {
             fbq('track', 'InitiateCheckout');
         }
     }
 
-    // 4. ВІДПРАВКА ФОРМИ В GOOGLE SHEETS
     document.getElementById('anketa').addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Ховаємо помилку
         errorMsg.style.display = "none";
         
-        // Перевірка правильності номера
         if (!iti.isValidNumber()) {
             errorMsg.style.display = "block";
             return;
         }
 
-        // Візуальна зміна кнопки (завантаження)
         const btn = document.getElementById('submit-btn');
         const originalBtnText = btn.innerHTML;
         btn.innerHTML = 'Відправка... <i class="fa-solid fa-spinner fa-spin"></i>';
         btn.disabled = true;
 
-        // Формуємо дані для відправки
+        // В PAYLOAD ТЕПЕР ДОДАЄТЬСЯ ПОЛЕ tariff
         const payload = {
-            source_flag: "landing_web", // Спеціальний прапорець для бекенду
+            source_flag: "landing_web",
             name: document.getElementById('u_name').value,
-            phone: iti.getNumber(), // беремо номер у міжнародному форматі (з плюсом)
+            phone: iti.getNumber(),
             telegram: document.getElementById('u_tg').value,
             request: document.getElementById('u_req').value,
+            tariff: selectedTariff, // ТУТ ПЕРЕДАЄТЬСЯ НАШ ЗАПАМ'ЯТАНИЙ ТАРИФ
             ...utms
         };
 
-        // ВСТАВ СВІЙ URL ВІД GOOGLE APPS SCRIPT СЮДИ 👇
         const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwY03KKDWDGIhAi9KEncZgALUcap5BJgW7Tq5424XceGzHvCZohV9fA3d7Enj7svXQy/exec";
 
         fetch(GOOGLE_SCRIPT_URL, {
             method: 'POST',
-            body: JSON.stringify(payload) // Відправляємо як JSON
+            body: JSON.stringify(payload) 
         })
         .then(res => res.json())
         .then(data => {
-            // Піксель: успішний лід
             if(typeof fbq !== 'undefined') fbq('track', 'Lead');
             
-            // Показуємо екран успіху замість форми
             const card = document.querySelector('.f-card');
             card.innerHTML = `
                 <div style="text-align:center;padding:24px 0;">
